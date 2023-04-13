@@ -7,11 +7,12 @@ import datetime
 
 class Rossmann( object ):
     def __init__( self ):
-        self.competition_distance_scaler  = pickle.load( open('paramenter/competition_distance_scaler.pkl','rb') )
-        self.competition_time_mont_scaler = pickle.load( open('paramenter/competition_time_mont_scaler.pkl','rb') )
-        self.promo_time_week_scaler       = pickle.load( open('paramenter/promo_time_week_scaler.pkl','rb') )
-        self.year_scaler                  = pickle.load( open('paramenter/year_scaler.pkl','rb') )
-        self.store_type_scaler            = pickle.load( open('paramenter/store_type_scaler.pkl','rb'))
+        self.home_path=""
+        self.competition_distance_scaler  = pickle.load( open(self.home_path + 'paramenter/competition_distance_scaler.pkl','rb') )
+        self.competition_time_mont_scaler = pickle.load( open(self.home_path + 'paramenter/competition_time_mont_scaler.pkl','rb') )
+        self.promo_time_week_scaler       = pickle.load( open(self.home_path + 'paramenter/promo_time_week_scaler.pkl','rb') )
+        self.year_scaler                  = pickle.load( open(self.home_path + 'paramenter/year_scaler.pkl','rb') )
+        self.store_type_scaler            = pickle.load( open(self.home_path + 'paramenter/store_type_scaler.pkl','rb'))
    
     
     def data_cleaning(self, df1):
